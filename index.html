@@ -11,6 +11,90 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		
+		<style>
+			.smooth-image{
+				border-radius: 25px;
+				cursor: pointer;
+				transition: 0.3s;
+				
+			}
+
+			.smooth-image:hover{
+				opacity: 0.7;
+			}
+
+			.modal{
+				display:none;
+				position:fixed;
+				padding-top: 100px;
+				left:0;
+				top:0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+
+				background-color: rgb(0,0,0);
+				background-color: rgba(0,0,0,0.9);
+			}
+
+			.modal-content{
+				margin: auto;
+				display:block;
+				width: 100%;
+				max-width: 700px;
+				-webkit-animation-name: zoom;
+				-webkit-animation-duration: 0.6s;
+				animation-name: zoom;
+				animation-duration: 0.6s;
+				
+			}
+
+			.close {
+				color: #aaa;
+				
+				font-size: 48px;
+				font-weight: bold;
+			}
+
+			.close:hover,
+			.close:focus {
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+			.caption{
+				margin: auto;
+				display: block;
+				width: 80%;
+				max-width: 700px;
+				text-align: center;
+				font-weight: bolder;
+				color: white;
+				padding: 10px;
+				height: 150px;
+		
+			}
+			/* Add Animation - Zoom in the Modal */
+			
+			@-webkit-keyframes zoom {
+				from {-webkit-transform:scale(0)}
+				to {-webkit-transform:scale(1)}
+			}
+
+			@keyframes zoom {
+				from {transform:scale(0)}
+				to {transform:scale(1)}
+			}
+
+			/* 100% Image Width on Smaller Screens */
+			@media only screen and (max-width: 700px){
+				.modal-content {
+					width: 100%;
+				}
+			}
+
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -85,23 +169,38 @@
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a class="image fit"><img src="images/joy_xmas.jpg" id="joy_xmas" alt="" /></a>										
+										<a class="image fit"><img class="smooth-image" src="images/joy_xmas.jpg" id="joy_xmas" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+											<!-- <div class = "caption" id="caption_joy_xmas">Christmas Joy Card!</div> -->
+										</div>
+
+										
 									</article>
 
 									<article class="item">
-										<a class="image fit"><img src="images/merry_bright_xmas.jpg" alt="" /></a>
+										<a class="image fit"><img class="smooth-image" src="images/merry_bright_xmas.jpg" id="merry_bright_xmas" alt="merry bright"/></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+											<!-- <div class = "caption" id="caption_merry_bright_xmas">Merry Bright Christmas!</div> -->
+										</div>
+										
+																			
 									</article>
 
 									<article class="item">
-										<a  class="image fit"><img src="images/spooky_halloween.jpg" alt="" /></a>
+										<a  class="image fit"><img class="smooth-image" src="images/spooky_halloween.jpg"/></a>
+										
 									</article>
 
 									<article class="item">
-										<a  class="image fit"><img src="images/25.jpg" alt="" /></a>
+										<a  class="image fit"><img class="smooth-image" src="images/25.jpg" alt="" /></a>
 									</article>
 
 									<article class="item">
-										<a  class="image fit"><img src="images/graduation_congrats.jpg" alt="" /></a>
+										<a  class="image fit"><img class="smooth-image" src="images/graduation_congrats.jpg" alt="" /></a>
 									</article>
 
 								</div>
@@ -109,47 +208,47 @@
 
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a class="image fit"><img src="images/greetings_xmas.jpg" alt="" /></a>	
+										<a class="image fit"><img class="smooth-image" src="images/greetings_xmas.jpg" alt="" /></a>	
 									</article>
 
 									<article class="item">
-										<a class="image fit"><img src="images/custom_order.jpg" alt="" /></a>
+										<a class="image fit"><img class="smooth-image" src="images/custom_order.jpg" alt="" /></a>
 									</article>
 
 									<article class="item">
-										<a  class="image fit"><img src="images/mothers_day.jpg" alt="" /></a>
+										<a  class="image fit"><img class="smooth-image" src="images/mothers_day.jpg" alt="" /></a>
 									</article>
 
 									<article class="item">
-										<a  class="image fit"><img src="images/thinking_of_you.jpg" alt="" /></a>
+										<a  class="image fit"><img class="smooth-image" src="images/thinking_of_you.jpg" alt="" /></a>
 									</article>
 
 									<article class="item">
-										<a  class="image fit"><img src="images/flowers_pink.jpg" alt="" /></a>
+										<a  class="image fit"><img class="smooth-image" src="images/flowers_pink.jpg" alt="" /></a>
 									</article>
 								</div>
 
 
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a class="image fit"><img src="images/wedding.jpg" alt="" /></a>
+										<a class="image fit"><img class="smooth-image" src="images/wedding.jpg" alt="" /></a>
 										
 									</article>
 									<article class="item">
-										<a class="image fit"><img src="images/for_someone_special.jpg" alt="" /></a>
+										<a class="image fit"><img class="smooth-image" src="images/for_someone_special.jpg" alt="" /></a>
 										
 									</article>
 
 									<article class="item">
-										<a  class="image fit"><img src="images/birthday.jpg" alt="" /></a>
+										<a  class="image fit"><img class="smooth-image" src="images/birthday.jpg" alt="" /></a>
 									</article>
 
 									<article class="item">
-										<a  class="image fit"><img src="images/magic_bday.jpg" alt="" /></a>
+										<a  class="image fit"><img class="smooth-image" src="images/magic_bday.jpg" alt="" /></a>
 									</article>
 
 									<article class="item">
-										<a  class="image fit"><img src="images/elephant.jpg" alt="" /></a>
+										<a  class="image fit"><img class="smooth-image" src="images/elephant.jpg" alt="" /></a>
 									</article>
 								</div>
 							</div>
@@ -165,10 +264,9 @@
 								<h2>About Me</h2>
 							</header>
 
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+							<a class="image featured"><img src="images/about-me-collage.JPG" alt="" /></a>
 
-							<p>Hi there! I'm Lorri, proud wife and mother of three. Crafting has been my passion for years now - I spend hours every day in my craft room making new things. </p>
-
+							<p>Hi there! I'm Lorri, proud wife and mother of three sons and one dustmop. Crafting has been my passion for years - I spend hours every day in my craft room whipping up new creations. </p>
 						</div>
 					</section>
 
@@ -234,7 +332,57 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			
+			<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+			<script>
+				// Get the modal
+				var modal = document.getElementById('myModal');
+
+				// Get the image and insert it inside the modal - use its "alt" text as a caption
+				var img = $('.smooth-image');
+				var modalImg = $("#modal-image");
+				var captionText = document.getElementById("caption");
+				$('.smooth-image').click(function(){
+					img.display="none";
+					modal.style.display = "block";
+					var newSrc = this.src;
+					modalImg.attr('src', newSrc);
+					//captionText.innerHTML = this.alt;
+				});
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() {
+				modal.style.display = "none";
+				}
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+				// var modal = document.getElementById("joy_xmas_modal");
+				// var img = document.getElementById("joy_xmas");
+				// var modalImg = document.getElementById("modal-image");
+
+				// img.onclick = function() {
+
+				// 	modal.style.display = "block";
+				// 	modalImg.src = this.src;
+				// 	captionText.innerHTML = this.alt;
+				// }
+
+				// var span = document.getElementsByClassName("close")[0];
+				// span.onclick = function() {
+				// 	  modal.style.display = "none";
+				// }
+				// window.onclick = function(event) {
+				// 	if (event.target == modal) {
+				// 		modal.style.display = "none";
+				// 	}
+				// }
+				
+			</script>
 
 	</body>
 </html>
