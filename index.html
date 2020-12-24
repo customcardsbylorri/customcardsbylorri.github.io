@@ -26,12 +26,14 @@
 			.modal{
 				display:none;
 				position:fixed;
+				z-index:1;
 				padding-top: 100px;
+				padding-bottom: 100px;
 				left:0;
 				top:0;
 				width: 100%;
 				height: 100%;
-				overflow: auto;
+				overflow:auto;
 
 				background-color: rgb(0,0,0);
 				background-color: rgba(0,0,0,0.9);
@@ -173,7 +175,6 @@
 										<div class="modal" id="myModal">
 											<span class="close">&times;</span>
 											<img id="modal-image" class="modal-content">
-											<!-- <div class = "caption" id="caption_joy_xmas">Christmas Joy Card!</div> -->
 										</div>
 
 										
@@ -192,15 +193,26 @@
 
 									<article class="item">
 										<a  class="image fit"><img class="smooth-image" src="images/spooky_halloween.jpg"/></a>
-										
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 									</article>
 
 									<article class="item">
 										<a  class="image fit"><img class="smooth-image" src="images/25.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 									</article>
 
 									<article class="item">
 										<a  class="image fit"><img class="smooth-image" src="images/graduation_congrats.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 									</article>
 
 								</div>
@@ -208,23 +220,43 @@
 
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a class="image fit"><img class="smooth-image" src="images/greetings_xmas.jpg" alt="" /></a>	
+										<a class="image fit"><img class="smooth-image" src="images/greetings_xmas.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>	
 									</article>
 
 									<article class="item">
 										<a class="image fit"><img class="smooth-image" src="images/custom_order.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 									</article>
 
 									<article class="item">
 										<a  class="image fit"><img class="smooth-image" src="images/mothers_day.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 									</article>
 
 									<article class="item">
 										<a  class="image fit"><img class="smooth-image" src="images/thinking_of_you.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 									</article>
 
 									<article class="item">
 										<a  class="image fit"><img class="smooth-image" src="images/flowers_pink.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 									</article>
 								</div>
 
@@ -232,23 +264,43 @@
 								<div class="col-4 col-12-mobile">
 									<article class="item">
 										<a class="image fit"><img class="smooth-image" src="images/wedding.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 										
 									</article>
 									<article class="item">
 										<a class="image fit"><img class="smooth-image" src="images/for_someone_special.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 										
 									</article>
 
 									<article class="item">
 										<a  class="image fit"><img class="smooth-image" src="images/birthday.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 									</article>
 
 									<article class="item">
 										<a  class="image fit"><img class="smooth-image" src="images/magic_bday.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 									</article>
 
 									<article class="item">
 										<a  class="image fit"><img class="smooth-image" src="images/elephant.jpg" alt="" /></a>
+										<div class="modal" id="myModal">
+											<span class="close">&times;</span>
+											<img id="modal-image" class="modal-content">
+										</div>
 									</article>
 								</div>
 							</div>
@@ -333,7 +385,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-			<script>
+			<!-- <script>
 				// Get the modal
 				var modal = document.getElementById('myModal');
 
@@ -342,7 +394,7 @@
 				var modalImg = $("#modal-image");
 				var captionText = document.getElementById("caption");
 				$('.smooth-image').click(function(){
-					img.display="none";
+
 					modal.style.display = "block";
 					var newSrc = this.src;
 					modalImg.attr('src', newSrc);
@@ -355,10 +407,12 @@
 				// When the user clicks on <span> (x), close the modal
 				span.onclick = function() {
 				modal.style.display = "none";
+
 				}
 				window.onclick = function(event) {
 					if (event.target == modal) {
 						modal.style.display = "none";
+
 					}
 				}
 				// var modal = document.getElementById("joy_xmas_modal");
@@ -382,7 +436,36 @@
 				// 	}
 				// }
 				
-			</script>
+			</script> -->
+			<script>
+				var modal = document.getElementById("myModal");
+				var i;
 
+				var img = document.getElementsByClassName("smooth-image");
+				var modalImg = document.getElementById("modal-image");
+
+				for(i=0;i< img.length;i++)
+				{    
+					img[i].onclick = function(){
+
+						modal.style.display = "block";
+						
+						modalImg.src = this.src;
+
+					}
+				}
+
+				var span = document.getElementsByClassName("close")[0];
+
+
+				span.onclick = function() { 
+				modal.style.display = "none";
+				}
+				// window.onclick = function(event) {
+				// 	if (event.target == modal) {
+				// 		modal.style.display = "none";
+				// 	}
+				// }
+			</script>
 	</body>
 </html>
